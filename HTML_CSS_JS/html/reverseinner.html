@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>
+            Reverse demo
+        </title>
+		
+	</head>
+<body>
+ 			<label>Enter a number</label>
+			<input type="number" min="0" class="form-control" id="digit"/>
+			<br />
+			<button class="btn btn-primary" onclick="reverseDigit();">Reverse</button> 
+			<br />
+			<div id="result"></div>
+		</body>
+<script>
+    function reverseDigit(){
+	var reverse=0;
+	var input = document.getElementById("digit").value;
+	if(input != 0){
+		var digit = parseInt(input);
+		while(digit){
+			reverse = parseInt(reverse * 10);
+			reverse = parseInt(reverse + (digit%10));
+			digit = parseInt(digit/10);
+		}
+		document.getElementById("digit").setAttribute('readonly', 'readonly');
+		document.getElementById("result").innerHTML = "reverse : "+ reverse ;
+	}else{
+		alert("Please complete the required field!");
+	}
+ 
+}
+ 
+
+</script>
+
+</html>

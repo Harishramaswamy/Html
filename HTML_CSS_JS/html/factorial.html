@@ -1,18 +1,30 @@
+<!doctype html>
 <html>
     <head>
         <title>
-            factorial 
+            Factorial number
         </title>
-        <script>
-            const num = 5;
-                const factorial = num => {
-                 let res = 1;
-                 for(let i = num; i > 1; i--){
-                  res *= i;
-                    };
-               return res;
-                   };
-                  console.log(factorial(num));
-        </script>
-    </head>
+</head>
+<body>
+         Enter Num: <input id="num"> 
+           <button onclick="show()">Factorial</button>
+
+           <br>
+           <br>
+        Answer : <input id="answer">
+</body>
+       <script>
+           function show(){
+    
+             var i, no, fact;
+              fact=1;
+               no=Number(document.getElementById("num").value);
+             for(i=1; i<=no; i++)  
+             {
+             fact= fact*i;
+                }  
+          document.getElementById("answer").value= fact;
+              }
+    </script>
+    
 </html>

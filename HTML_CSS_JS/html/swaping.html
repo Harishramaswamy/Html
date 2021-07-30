@@ -1,22 +1,28 @@
+<!Doctype html>
 <html>
-    <head>
-        <title>
-            swaping of two numbers
-        </title>
-        <script>
-            let a = prompt('Enter the first variable: ');
-             let b = prompt('Enter the second variable: ');
+      <head>
 
-//create a temporary variable
-let temp;
-
-//swap variables
-temp = a;
-a = b;
-b = temp;
-
-console.log(`The value of a after swapping: ${a}`);
-console.log(`The value of b after swapping: ${b}`);
-        </script>
-    </head>
+</head>
+<body> 
+     <h3> Before Swaping :</h3>
+      first number : <input id="first">
+       second number: <input id="second"></br></br>
+       <button onclick="swap()">Swaping numbers</button></br></br>
+       <h3>After Swaping :</h3>
+       first number: <input id="answer1">
+        Second number: <input id="answer2">
+</body>
+<script>
+    function swap(){
+    
+     var a=Number(document.getElementById("first").value);
+     var b=Number(document.getElementById("second").value);
+     var c;
+    c=a;
+    a=b;
+    b=c;
+    document.getElementById("answer1").value= a;
+    document.getElementById("answer2").value= b;
+    }
+    </script>
 </html>
